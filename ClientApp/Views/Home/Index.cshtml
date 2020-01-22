@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="alert alert-info clearfix">
+    <div class="centered">
+        <h1>Employee Details</h1>
+    </div>
+    <button id="createmodelId" type="button" class="btn btn-primary btn-lg pull-right float-right">CREATE</button>
+    <div class="container">
+        <div style="width:90%; margin:0 auto;">
+            <table id="demoGrid">
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Nick Name</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <br />
+
+</div>
+
+
+<div class="modal fade" id="modal-delete-id" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Do you really want to delete?
+            </div>
+            <div class="modal-footer">
+                <input type="hidden" id="deleteId" />
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+                <button type="button" class="btn btn-danger" onclick="Delete()">Yes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="editor-container" tabindex="-1" role="dialog" aria-labelledby="editor-title">
+    <div class="modal-dialog" role="document" style="width:25000px;">
+        <div class="modal-content" id="editor-content-container"></div>
+    </div>
+</div>
+
+<div class="modal fade" id="create-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+
+            </div>
+            <div class="modal-body">
+                <p>Account create Successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal" onclick="reloadpage()">OKAY</button>
+                <button type="button" class="btn btn-primary"
+                        data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
