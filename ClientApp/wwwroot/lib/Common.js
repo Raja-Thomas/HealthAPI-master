@@ -175,6 +175,8 @@ $(document).ajaxStop(function () {
     $.validator.unobtrusive.parse("#frmClient");
 });
 
+
+// for reload the page
 function reloadpage() {
     window.location.reload();
 }
