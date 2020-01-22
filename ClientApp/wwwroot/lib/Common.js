@@ -175,6 +175,3 @@ $(document).ajaxStop(function () {
     $.validator.unobtrusive.parse("#frmClient");
 });
 
-function reloadpage() {
-    window.location.reload();
-}
