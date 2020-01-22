@@ -145,6 +145,9 @@ function UpdateContact() {
             }
         });
     }
+    else {
+        validator.focusInvalid();
+    }
 }
 
 // Delete Action Performed here
