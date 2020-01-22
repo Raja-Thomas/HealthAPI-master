@@ -146,6 +146,7 @@ function UpdateContact() {
         });
     }
     else {
+    else { 
         validator.focusInvalid();
     }
 }
